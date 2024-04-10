@@ -20,9 +20,9 @@ afterAll( async () => {
 
 describe('Bearer Middleware Test', () => {
   it('Should authenticate token and next should be called', async () => {
-    let token = jwt.sign(user.username, process.env.SECRET)
+    let token = jwt.sign(user.username, process.env.SECRET);
     let req = {
-      headers: {authorization: `Bearer ${token}`}
+      headers: {authorization: `Bearer ${token}`},
     };
     let res = null;
     let next = jest.fn();
